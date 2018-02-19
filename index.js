@@ -42,7 +42,8 @@ function viewCart() {
     itemsAndPrices = itemsAndPrices.join(" and ");
     break;
     default:
-      itemsAndPrices
+      itemsAndPrices[l-1] = "and".concat(itemsAndPrices[l-1]);
+      itemsAndPrices = itemsAndPrices.join(", ");
   }
 }
 
