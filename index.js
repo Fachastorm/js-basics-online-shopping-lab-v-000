@@ -23,7 +23,7 @@ function viewCart() {
   const l = cart.length;
 
   if (!l) {
-    return console.log(`Your shopping cart is empty`);
+    return console.log("Your shopping cart is empty.");
   }
 
   let itemsAndPrices = [];
