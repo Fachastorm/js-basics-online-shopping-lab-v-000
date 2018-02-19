@@ -33,20 +33,23 @@ function viewCart() {
     let item = Object.keys(itemAndPrice)[0];
     let price = itemAndPrice[item];
 
-    itemsAndPrices.push(` ${item} at \$${price}`);
+    itemsAndPrices.push(`${item} at \$${price}`);
   }
+
   switch(itemsAndPrices.length) {
     case 1:
-    break;
+      break;
     case 2:
-    itemsAndPrices = itemsAndPrices.join(" and ");
-    break;
+      itemsAndPrices = itemsAndPrices.join(" and ");
+      break;
     default:
       itemsAndPrices[l-1] = "and ".concat(itemsAndPrices[l-1]);
       itemsAndPrices = itemsAndPrices.join(", ");
   }
-  console.log(`In your cart, you have ${itemsAndPrices}.`)
+
+  console.log(`In your cart, you have ${itemsAndPrices}.`);
 }
+
 
 function total() {
   // write your code here
